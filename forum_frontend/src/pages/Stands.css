@@ -1,0 +1,139 @@
+/* ─── Stands Page ──────────────────────────────────────────── */
+.stands-filter {
+  display: flex;
+  gap: 0.25rem;
+  background: var(--white);
+  border: 1px solid rgba(26,86,219,0.12);
+  border-radius: var(--radius-sm);
+  padding: 3px;
+  box-shadow: var(--shadow-sm);
+}
+
+.filter-btn {
+  padding: 0.4rem 0.9rem;
+  border-radius: 6px;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  color: var(--slate);
+  transition: all var(--transition);
+}
+
+.filter-btn.active {
+  background: var(--blue);
+  color: var(--white);
+}
+
+.filter-btn:not(.active):hover {
+  background: var(--blue-ghost);
+  color: var(--navy);
+}
+
+/* Grid */
+.stands-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+
+/* Stand card */
+.stand-card {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  position: relative;
+  overflow: hidden;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.stand-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.stand-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--green);
+}
+
+.stand-occupied::before {
+  background: var(--red);
+}
+
+.stand-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.stand-name {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--navy);
+  letter-spacing: -0.02em;
+}
+
+.stand-desc {
+  font-size: 0.875rem;
+  color: var(--slate);
+  line-height: 1.65;
+  flex: 1;
+}
+
+.stand-entreprise {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--blue);
+  background: var(--blue-pale);
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius-sm);
+}
+
+.stand-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: auto;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--blue-pale);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .stands-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Alerte stand déjà réservé */
+.stand-already-reserved {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #92400E;
+  background: #FEF3C7;
+  border: 1px solid #FCD34D;
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-sm);
+}
+
+/* Bouton Réserver désactivé */
+.btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: none !important;
+  box-shadow: none !important;
+}

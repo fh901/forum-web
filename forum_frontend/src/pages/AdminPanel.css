@@ -1,0 +1,131 @@
+/* ─── Admin Panel ───────────────────────────────────────────── */
+.admin-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, var(--navy), #1B3A6B);
+  color: var(--white);
+  padding: 0.5rem 1.25rem;
+  border-radius: var(--radius-md);
+  font-size: 0.85rem;
+  font-weight: 700;
+  box-shadow: var(--shadow-blue);
+}
+
+/* Tabs */
+.admin-tabs {
+  display: flex;
+  gap: 0.25rem;
+  background: var(--white);
+  border: 1px solid rgba(26,86,219,0.1);
+  border-radius: var(--radius-md);
+  padding: 4px;
+  margin-bottom: 1.75rem;
+  box-shadow: var(--shadow-sm);
+  overflow-x: auto;
+}
+
+.admin-tab {
+  flex: 1;
+  min-width: 130px;
+  padding: 0.6rem 1rem;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  color: var(--slate);
+  transition: all var(--transition);
+  white-space: nowrap;
+  letter-spacing: -0.01em;
+}
+
+.admin-tab:hover {
+  background: var(--blue-ghost);
+  color: var(--navy);
+}
+
+.admin-tab.active {
+  background: var(--navy);
+  color: var(--white);
+}
+
+/* Stat cards */
+.stat-card .stat-value {
+  font-family: var(--font-display);
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: var(--blue);
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.stat-card .stat-label {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--slate);
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+}
+
+/* 2 col grid */
+.admin-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+/* Quick list items */
+.quick-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.65rem 0;
+  border-bottom: 1px solid var(--blue-pale);
+  gap: 0.5rem;
+}
+
+.quick-item:last-child {
+  border-bottom: none;
+}
+
+.quick-item-main {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.quick-item-main strong {
+  font-size: 0.875rem;
+  color: var(--navy);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.quick-item-main span {
+  font-size: 0.775rem;
+  color: var(--slate);
+}
+
+/* Tables in admin */
+.admin-table-name {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--navy);
+  letter-spacing: -0.01em;
+}
+
+@media (max-width: 768px) {
+  .admin-grid-2 {
+    grid-template-columns: 1fr;
+  }
+  .admin-tabs {
+    flex-wrap: nowrap;
+  }
+  .admin-tab {
+    flex: 0 0 auto;
+  }
+}

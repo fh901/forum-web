@@ -1,0 +1,188 @@
+/* ─── Auth Pages (Login + Register) ─────────────────────────── */
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(ellipse at 30% 20%, rgba(26,86,219,0.10) 0%, transparent 55%),
+    radial-gradient(ellipse at 80% 80%, rgba(11,29,58,0.08) 0%, transparent 55%),
+    var(--blue-ghost);
+  padding: 2rem 1rem;
+}
+
+/* ── Card centrale ── */
+.auth-card {
+  background: var(--white);
+  border-radius: 20px;
+  padding: 2.5rem 2.25rem 2rem;
+  width: 100%;
+  max-width: 420px;
+  box-shadow:
+    0 2px 4px rgba(11,29,58,0.04),
+    0 8px 32px rgba(11,29,58,0.10),
+    0 0 0 1px rgba(26,86,219,0.07);
+  animation: authFadeUp 0.3s ease;
+}
+
+@keyframes authFadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Logo ── */
+.auth-logo-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.auth-logo-wrap img {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* ── Séparateur ── */
+.auth-logo-divider {
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(26,86,219,0.15), transparent);
+  margin-bottom: 1.5rem;
+}
+
+/* ── Header formulaire ── */
+.auth-card-header {
+  margin-bottom: 1.35rem;
+  text-align: center;
+}
+
+.auth-card-header h2 {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--navy);
+  letter-spacing: -0.03em;
+  margin-bottom: 0.3rem;
+}
+
+.auth-card-header p {
+  font-size: 0.82rem;
+  color: var(--slate);
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/* ── Comptes démo ── */
+.demo-section {
+  margin-top: 1.1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--blue-pale);
+}
+
+.demo-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--slate);
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  text-align: center;
+  margin-bottom: 0.6rem;
+}
+
+.demo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.4rem;
+}
+
+.demo-btn {
+  padding: 0.45rem 0.5rem;
+  border-radius: 7px;
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1.5px solid;
+  transition: all var(--transition);
+  text-align: center;
+  background: transparent;
+}
+
+.demo-btn:hover {
+  opacity: 0.85;
+  transform: translateY(-1px);
+}
+
+/* ── Lien bas ── */
+.auth-link-text {
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--slate);
+  margin-top: 1.1rem;
+}
+
+.auth-link {
+  color: var(--blue);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.auth-link:hover {
+  text-decoration: underline;
+}
+
+/* ── Responsive ── */
+@media (max-width: 480px) {
+  .auth-card {
+    padding: 2rem 1.25rem 1.75rem;
+  }
+}
+
+/* ── Mot de passe oublié ── */
+.forgot-link {
+  display: block;
+  text-align: right;
+  font-size: 0.78rem;
+  color: var(--blue);
+  font-weight: 600;
+  text-decoration: none;
+  margin-top: -0.5rem;
+  margin-bottom: 1rem;
+}
+.forgot-link:hover { text-decoration: underline; }
+
+.forgot-success {
+  text-align: center;
+  padding: 0.5rem 0 0.75rem;
+}
+.forgot-success-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #ECFDF5;
+  border: 2px solid #A7F3D0;
+  color: #10B981;
+  font-size: 1.4rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+}
+.forgot-success h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 0.5rem;
+}
+.forgot-success p {
+  font-size: 0.82rem;
+  color: var(--slate);
+  line-height: 1.6;
+  margin-bottom: 0.4rem;
+}
+.forgot-note {
+  font-size: 0.72rem !important;
+  color: var(--slate-light) !important;
+  font-style: italic;
+}
