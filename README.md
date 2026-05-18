@@ -32,6 +32,7 @@ cd forum_backend
 composer install
 copy .env.example .env
 php artisan key:generate
+php artisan storage:link
 ```
 
 Ouvre le fichier `.env` et vérifie ces lignes :
