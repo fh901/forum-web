@@ -2,9 +2,8 @@
 
 Application web de gestion du Forum ENSAJ Entreprises — backend Laravel + frontend React.
 realisé par : 
-- Hsina fatima ezzahraa
-
--el haoud  maryem 
+ - Hsina fatima ezzahraa
+ - el haoud  maryem 
 
 ---
 
